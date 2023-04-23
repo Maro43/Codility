@@ -1,25 +1,16 @@
 package Lessons;
 
 public class LessonThreeFrogJmp {
-    public int solution(int x, int y, int d) {
 
-//        int jumping = x + d;
-//        int jumps;
-//        boolean isFinish = false;
-//        while (isFinish)
-//            if (d >= jumping) {
-//                d++;
-//            } else {
-//                isFinish = true;
-//            }
+    /*public int solution(int x, int y, int d) {
         int distance = y - x;
         int count;
         for (count = 0; distance > 0; count++) {
             distance -= d;
         }
         return count;
-    }
-    public int solution2(int x, int y, int d){
+    }*/
+    /*public int solution2(int x, int y, int d){
         int distance = y - x;
         int count = 0;
         while (distance > 0){
@@ -27,7 +18,7 @@ public class LessonThreeFrogJmp {
             count++;
         }
         return count;
-    }
+    }*/
     public int solution3(int x, int y, int d){
         return (int)Math.ceil((double)(y-x)/d);
     }
