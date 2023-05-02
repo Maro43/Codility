@@ -1,32 +1,60 @@
 package Lessons;
 
+import java.util.Stack;
+
 public class LessonSevenBrackets {
 
     public int solution(String s) {
         s.split("");
-        if (s.length() % 2 == 0) {
+        if (s.length() % 2 != 0) {
             return 0;
         }
+        Stack<Character> stack = new Stack<>();
 
-            for (int i = 0; i < s.length(); i++) {
-                if
-                    return 1;
-
+        for (int i = 0; i < s.length(); i++) {
+            char br = s.charAt(i);
+            if (isStart(br)) {
+                stack.push(br);
+            } else {
+                if (stack.size() == 0) {
+                    return 0;
                 }
+                char br1 = stack.pop();
+                if (isClosed(br1, br) == false){
+                    return 0;
+                }
+
             }
-
-
-        boolean isClosed(char bracket) {
-                if ()
-                return
         }
-
-
+        if (stack.size() == 0)
+            return 1;
         return 0;
     }
 
+
+    boolean isStart(char bracket) {
+        if (bracket == '{' || bracket == '[' || bracket == '(') {
+            return true;
+        }
+        return false;
+    }
+
+    boolean isClosed(char bracket1, char bracket2) {
+        if (bracket1 == '{' && bracket2 == '}') {
+            return true;
+        }
+        if (bracket1 == '[' && bracket2 == ']') {
+            return true;
+        }
+        if (bracket1 == '(' && bracket2 == ')') {
+            return true;
+        }
+        return false;
+    }
+
+
     public static void main(String[] args) {
-        String s = "{[(]()]}";
+        String s = "{[()()]}";
         System.out.println(new LessonSevenBrackets().solution(s));
     }
 }
