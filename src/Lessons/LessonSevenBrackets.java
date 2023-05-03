@@ -20,7 +20,7 @@ public class LessonSevenBrackets {
                     return 0;
                 }
                 char br1 = stack.pop();
-                if (isClosed(br1, br) == false){
+                if (isClosed(br1, br) == false) {
                     return 0;
                 }
 
@@ -52,9 +52,35 @@ public class LessonSevenBrackets {
         return false;
     }
 
+    public int solution2(String s) {
+        s.split("");
+        if (s.length() % 2 != 0) {
+            return 0;
+        }
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char save = s.charAt(i);
+            if (save == '{' || save == '[' || save == '(') {
+                stack.push(save);
+            } else {
+                if (stack.size() == 0) return 0;
+
+                char check = stack.pop();
+                if ((check == '{' && save == '}')||(check == '[' && save == ']')||(check == '(' && save == ')'));
+                else return 0;
+
+            }
+        }
+        if (stack.size() == 0)
+            return 1;
+
+        return 0;
+    }
+
 
     public static void main(String[] args) {
         String s = "{[()()]}";
-        System.out.println(new LessonSevenBrackets().solution(s));
+        System.out.println(new LessonSevenBrackets().solution2(s));
     }
 }
