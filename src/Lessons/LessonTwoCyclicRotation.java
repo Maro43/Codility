@@ -1,9 +1,9 @@
 package Lessons;
 
 /*
-
-
-An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
+An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one
+index, and the last element of the array is moved to the first place. For example, the rotation of array
+A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
 
         The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
 
@@ -39,9 +39,9 @@ that, given an array A consisting of N integers and an integer K, returns the ar
         N and K are integers within the range [0..100];
         each element of array A is an integer within the range [−1,000..1,000].
 
-        In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
+        In your solution, focus on correctness. The performance of your solution will not be the focus
+        of the assessment.
 */
-
 
 import java.util.Arrays;
 
@@ -49,13 +49,8 @@ public class LessonTwoCyclicRotation {
     public int[] solution(int[] a, int k) {
 
         int arrLen = a.length;
-
         if (arrLen == 0)
             return a;
-
-//        for (int i = 0; i < k; i++) {
-//            int result = (i + k) - arrLen;
-//        }
 
         for (int i = 0; i < k; i++){
             int sol = a[arrLen - 1];
@@ -73,7 +68,6 @@ public class LessonTwoCyclicRotation {
 
         LessonTwoCyclicRotation solution = new LessonTwoCyclicRotation();
         int[] result = solution.solution(a, k);
-
         System.out.println(Arrays.toString(result));
     }
 
