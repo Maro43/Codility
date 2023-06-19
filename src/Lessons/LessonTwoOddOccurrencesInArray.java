@@ -41,6 +41,8 @@ public class LessonTwoOddOccurrencesInArray {
     public int solution(int[] A) {
 
         Set<Integer> set = new HashSet<>();
+        int result = 0;
+
         for (int number : A) {
             if (!set.contains(number)) {
                 set.add(number);
@@ -48,12 +50,10 @@ public class LessonTwoOddOccurrencesInArray {
                 set.remove(number);
             }
         }
-        int result = 0;
         for (int el : set) {
             result = el;
         }
         return result;
-//        return set.stream().findFirst().orElseThrow();
     }
 
     public static void main(String[] args) {
