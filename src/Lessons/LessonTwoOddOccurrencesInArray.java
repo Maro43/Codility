@@ -50,8 +50,8 @@ public class LessonTwoOddOccurrencesInArray {
                 set.remove(number);
             }
         }
-        for (int el : set) {
-            result = el;
+        for (int element : set) {
+            result = element;
         }
         return result;
     }
