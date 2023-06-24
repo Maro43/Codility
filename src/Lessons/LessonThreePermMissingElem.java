@@ -28,19 +28,19 @@ that, given an array A, returns the value of the missing element.
 
 public class LessonThreePermMissingElem {
 
-    public int solution2(int[] a){
+    public int solution(int[] num){
         int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-            sum += a[i];
+        for (int i = 0; i < num.length; i++) {
+            sum += num[i];
         }
-        int result =(((a.length+1) * ((a.length+1)+1)) / 2) - sum;
+        int result =(((num.length+1) * ((num.length+1)+1)) / 2) - sum;
         return result;
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 5, 6, 7, 8, 9, 10};
+        int[] num = {1, 2, 3, 5, 6, 7, 8, 9, 10};
         LessonThreePermMissingElem missingElem = new LessonThreePermMissingElem();
-        int solution = missingElem.solution2(a);
+        int solution = missingElem.solution(num);
         System.out.println(solution);
     }
 }
