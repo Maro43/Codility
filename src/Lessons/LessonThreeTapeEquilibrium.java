@@ -53,19 +53,11 @@ public class LessonThreeTapeEquilibrium {
         int p = n - 1;
         int sum = 0;
         int sumPartOne = 0;
-//        int sumPartTwo;
-//        int difference = 0;
         int result = Integer.MAX_VALUE;
 
         for (int i = 0; i < n; i++) {
             sum += a[i];
         }
-//        for (int j = 0; j < p; j++) {
-//            sumPartOne += a[j];
-//            sumPartTwo = sum - sumPartOne;
-//            difference = Math.abs(sumPartOne - sumPartTwo);
-//            result = Math.min(difference, result);
-//        }
         for (int j = 0; j < p; j++) {
             sumPartOne += a[j];
             result = Math.min(Math.abs(sumPartOne - (sum - sumPartOne)), result);
