@@ -1,7 +1,6 @@
 package Lessons;
 
 /*
-
 A small frog wants to get to the other side of a river. The frog is initially located on one bank of the river (position 0) and wants to get to the opposite bank (position X+1). Leaves fall from a tree onto the surface of the river.
 
         You are given an array A consisting of N integers representing the falling leaves. A[K] represents the position where one leaf falls at time K, measured in seconds.
@@ -44,32 +43,11 @@ that, given a non-empty array A consisting of N integers and integer X, returns 
 
         N and X are integers within the range [1..100,000];
         each element of array A is an integer within the range [1..X].
-
 */
 
 import java.util.HashSet;
 
 public class LessonFourFrogRiverOne {
-//    public int solution(int x, int[] a) {
-//
-//        HashSet<Integer> bridge = new HashSet<>();
-//        int result = 0;
-//
-//        for (int i = 0; i < a.length; i++) {
-//            int leaves = a[i];
-//            if (!bridge.contains(leaves)) {
-//                bridge.add(leaves);
-//                bridge.stream().count();
-//                if (bridge.stream().count() == x) {
-//                    result = i;
-//                    return result;
-//                } else {
-//                    result = -1;
-//                }
-//            }
-//        }
-//        return result;
-//    }
 
     public int solution(int x, int[] a) {
 
@@ -85,41 +63,6 @@ public class LessonFourFrogRiverOne {
         }
         return -1;
     }
-
-/*    public int solution2(int x, int[] a) {
-        int sumX = 0;
-        int sumLeaves = 0;
-        int sum2X = (x * (x + 1)) / 2;
-//        for (int i = 0; i < x; i++) {
-//            sumX = sumX + (i+1);
-//        }
-        for (int i = 0; i < a.length; i++) {
-            sumLeaves += a[i];
-        }
-        return sum2X;
-    }*/
-
-    /*public int solution3(int x, int[] a) {
-        HashSet<Integer> bridge = new HashSet<>();
-        for (int i = 0; i < x; i++) {
-            bridge.add(i);
-        }
-        int result = 0;
-        HashSet<Integer> leaves = new HashSet<>();
-
-        for (int j = 0; j < a.length; j++) {
-            leaves.add(a[j]);
-            if (x > leaves.size()) continue;
-            if (leaves.containsAll(bridge)) {
-                result = j;
-                return result;
-            } else {
-                result = -1;
-                return result;
-            }
-        }
-        return result;
-    }*/
 
     public static void main(String[] args) {
         int[] a = {1, 3, 1, 4, 2, 3, 5, 4};
