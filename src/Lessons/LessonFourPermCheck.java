@@ -1,7 +1,6 @@
 package Lessons;
 
 /*
-
 A non-empty array A consisting of N integers is given.
 
         A permutation is a sequence containing each element from 1 to N once, and only once.
@@ -46,7 +45,6 @@ that, given an array A, returns 1 if array A is a permutation and 0 if it is not
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [1..1,000,000,000].
-
 */
 
 import java.util.HashSet;
@@ -54,10 +52,12 @@ import java.util.HashSet;
 public class LessonFourPermCheck {
 
     public int solution(int[] a) {
+
         HashSet<Integer> set = new HashSet<>();
         int max = a[0];
         int x = a.length;
         int result = 0;
+
         for (int i = 0; i < x; i++) {
             set.add(a[i]);
         }
@@ -71,20 +71,6 @@ public class LessonFourPermCheck {
                 result = 1;
                 return result;
             }
-        }
-        return result;
-    }
-
-    public int solution2(int[] a) {
-        HashSet<Integer> set = new HashSet<>();
-        int x = a.length;
-        int result = 0;
-        for (int i = 0; i < x; i++) {
-            set.add(a[i]);
-        }
-        if (x == set.size()) {
-            result = 1;
-            return result;
         }
         return result;
     }
