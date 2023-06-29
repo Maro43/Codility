@@ -1,7 +1,6 @@
 package Lessons;
 
 /*
-
 A non-empty array A consisting of N integers is given. The consecutive elements of array A represent consecutive cars on a road.
 
         Array A contains only 0s and/or 1s:
@@ -44,34 +43,9 @@ that, given a non-empty array A of N integers, returns the number of pairs of pa
 */
 
 public class LessonFivePassingCars {
-/*    public int solution(int[] a) {
-
-        ArrayList<Object> carsEast = new ArrayList<>();
-        int sum = 0;
-        int sum0 = 0;
-        int sum1 = 0;
-        for (int i = 0; i < a.length; i++) {
-            sum += a[i];
-            if (a[i] == 0) {
-                if (sum == 0) {
-                    sum0 = 0;
-                } else {
-                    sum0 += 1;
-                }
-            } else if (a[0] == 0) {
-                if (sum == 0) {
-                    sum1 = 0;
-                } else {
-                    sum1 = 1;
-                }
-            }
-        }
-        sum = (sum0 * sum) - sum0 + sum1;
-        return sum;
-
-    }*/
 
     public int solution2(int[] a) {
+
         int all = 0;
         int pair = 0;
 
@@ -85,7 +59,6 @@ public class LessonFivePassingCars {
                 return -1;
             }
         }
-
         return all;
     }
 
