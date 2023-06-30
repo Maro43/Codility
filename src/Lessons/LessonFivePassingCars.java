@@ -44,7 +44,7 @@ that, given a non-empty array A of N integers, returns the number of pairs of pa
 
 public class LessonFivePassingCars {
 
-    public int solution2(int[] a) {
+    public int solution(int[] a) {
 
         int all = 0;
         int pair = 0;
@@ -65,7 +65,6 @@ public class LessonFivePassingCars {
     public static void main(String[] args) {
         int[] a = {0,0,0,0};
         LessonFivePassingCars passingCars = new LessonFivePassingCars();
-        System.out.println(passingCars.solution2(a));
+        System.out.println(passingCars.solution(a));
     }
 }
-
