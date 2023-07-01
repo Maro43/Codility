@@ -19,12 +19,11 @@ that, given an array A consisting of N integers, returns the number of distinct 
         each element of array A is an integer within the range [−1,000,000..1,000,000].
 */
 
-        import java.util.HashSet;
+import java.util.HashSet;
 
 public class LessonSixDistinct {
     public int solution(int[] a) {
         HashSet<Integer> set = new HashSet<>();
-
         for (int i = 0; i < a.length; i++) {
             set.add(a[i]);
         }
