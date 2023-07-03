@@ -41,16 +41,13 @@ that, given a non-empty array A, returns the value of the maximal product of any
         each element of array A is an integer within the range [−1,000..1,000].
 */
 
-
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class LessonSixMaxProductOfThree {
 
-
     public int solution(int[] a) {
         ArrayList<Integer> list = new ArrayList<>();
-
 
         for (int i = 0; i < a.length; i++) {
             list.add(a[i]);
@@ -61,19 +58,15 @@ public class LessonSixMaxProductOfThree {
         int sum2 = list.get(list.size() - 1) * list.get(list.size() - 2) * list.get(list.size() - 3);
         int sum3 = list.get(0) * list.get(1) * list.get(list.size() - 1);
         int sum4 = list.get(0) * list.get(list.size() - 1) * list.get(list.size() - 2);
-
         int check1 = Math.max(sum1, sum2);
         int chcck2 = Math.max(sum3, sum4);
         int result = Math.max(check1, chcck2);
         return result;
     }
 
-
-
     public static void main(String[] args) {
         int[] a = {-3, 1, 2, -2, 5, 6};
         LessonSixMaxProductOfThree productOfThree = new LessonSixMaxProductOfThree();
         System.out.println(productOfThree.solution(a));
     }
-
 }
