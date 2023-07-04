@@ -59,8 +59,8 @@ public class LessonSixMaxProductOfThree {
         int sum3 = list.get(0) * list.get(1) * list.get(list.size() - 1);
         int sum4 = list.get(0) * list.get(list.size() - 1) * list.get(list.size() - 2);
         int check1 = Math.max(sum1, sum2);
-        int chcck2 = Math.max(sum3, sum4);
-        int result = Math.max(check1, chcck2);
+        int check2 = Math.max(sum3, sum4);
+        int result = Math.max(check1, check2);
         return result;
     }
 
