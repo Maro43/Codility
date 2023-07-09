@@ -1,4 +1,5 @@
 package Lessons;
+
 /*
 A string S consisting of N characters is considered to be properly nested if any of the following conditions is true:
 
