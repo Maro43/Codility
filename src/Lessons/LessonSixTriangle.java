@@ -35,11 +35,10 @@ Write an efficient algorithm for the following assumptions:
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 */
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class LessonSixTriangle {
+
     public int solution(int[] a) {
         Arrays.sort(a);
         for (int i = 0; i < a.length - 2; i++) {
@@ -57,9 +56,8 @@ public class LessonSixTriangle {
         return 0;
     }
 
-
     public static void main(String[] args) {
-        int[] a = {Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE};
+        int[] a = {5, 10, 12};
         System.out.println(new LessonSixTriangle().solution(a));
     }
 }
