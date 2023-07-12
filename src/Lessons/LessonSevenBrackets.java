@@ -56,10 +56,6 @@ public class LessonSevenBrackets {
         return 0;
     }
 
-
-
-
-
     public static void main(String[] args) {
         String s = "{[(()(())())]}";
         System.out.println(new LessonSevenBrackets().solution(s));
