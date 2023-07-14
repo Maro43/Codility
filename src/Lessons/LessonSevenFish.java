@@ -42,23 +42,21 @@ Write an efficient algorithm for the following assumptions:
         the elements of A are all distinct.
 */
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class LessonSevenFish {
 
-    public int solution(int[] a, int[] b){
-
+    public int solution(int[] a, int[] b) {
         Stack<Integer> stackFish = new Stack<>();
         int survive = a.length;
 
-        for (int i = 0; i < a.length ; i++) {
-            if (b[i]==1){
+        for (int i = 0; i < a.length; i++) {
+            if (b[i] == 1) {
                 stackFish.push(a[i]);
             } else {
-                while (!stackFish.isEmpty()){
+                while (!stackFish.isEmpty()) {
                     int downSize = stackFish.peek();
-                    if (downSize >a[i]){
+                    if (downSize > a[i]) {
                         survive--;
                         break;
                     } else {
@@ -68,20 +66,12 @@ public class LessonSevenFish {
                 }
             }
         }
-
         return survive;
     }
-
-
-
-
-
 
     public static void main(String[] args) {
         int[] a = {4, 3, 2, 1, 5};
         int[] b = {0, 1, 0, 0, 0};
         System.out.println(new LessonSevenFish().solution(a, b));
     }
-
-
 }
