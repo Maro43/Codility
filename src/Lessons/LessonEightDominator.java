@@ -71,7 +71,7 @@ public class LessonEightDominator {
     }
 
     public static void main(String[] args) {
-        int[] a = {2, 4, 3, 1, 3, -1, 3, 3,3,4,2,3,3};
+        int[] a = {1,20,2,5};
         System.out.println(new LessonEightDominator().solution(a));
     }
 }
