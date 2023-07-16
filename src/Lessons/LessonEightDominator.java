@@ -1,7 +1,6 @@
 package Lessons;
 
 /*
-
 An array A consisting of N integers is given. The dominator of array A is the value that occurs in more than half of the elements of A.
 
 For example, consider array A such that
@@ -28,7 +27,6 @@ Write an efficient algorithm for the following assumptions:
 
         N is an integer within the range [0..100,000];
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
-
 */
 
 public class LessonEightDominator {
