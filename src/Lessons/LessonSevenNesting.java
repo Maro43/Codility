@@ -1,7 +1,6 @@
 package Lessons;
 
 /*
-
 A string S consisting of N characters is called properly nested if:
 
         S is empty;
@@ -22,7 +21,6 @@ Write an efficient algorithm for the following assumptions:
 
         N is an integer within the range [0..1,000,000];
         string S is made only of the characters '(' and/or ')'.
-
 */
 
 import java.util.HashMap;
@@ -36,7 +34,6 @@ public class LessonSevenNesting {
 
         if (s.length() % 2 != 0)
             return 0;
-
         for (int i = 0; i < s.length(); i++) {
             String current = String.valueOf(s.charAt(i));
             if (map.containsKey(current)) {
@@ -50,8 +47,9 @@ public class LessonSevenNesting {
                 stack.push(current);
             }
         }
-        if (stack.isEmpty()) return 1;
-
+        if (stack.isEmpty()) {
+            return 1;
+        }
         return 0;
     }
 
