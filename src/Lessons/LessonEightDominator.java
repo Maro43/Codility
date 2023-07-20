@@ -30,8 +30,8 @@ Write an efficient algorithm for the following assumptions:
 */
 
 public class LessonEightDominator {
-    public int solution(int[] a) {
 
+    public int solution(int[] a) {
         int size = 0;
         int index = -1;
         int current = 0;
