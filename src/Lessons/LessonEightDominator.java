@@ -37,12 +37,12 @@ public class LessonEightDominator {
         int current = 0;
         int dom = 0;
 
-        for (int i = 0; i < a.length; i++) {
+        for (int num : a) {
             if (size == 0) {
                 size++;
-                current = a[i];
+                current = num;
             } else {
-                if (current != a[i]) {
+                if (current != num) {
                     size--;
                 } else {
                     size++;
@@ -52,13 +52,14 @@ public class LessonEightDominator {
         if (size > 0)
             dom = current;
         int count = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == dom) {
+        for (int num : a) {
+            if (num == dom) {
                 count++;
             }
         }
-        if (count > a.length / 2) {
-        } else return -1;
+        if (count <= a.length / 2) {
+            return -1;
+        }
         for (int i = 0; i < a.length; i++) {
             if (dom == a[i]) {
                index=i;
