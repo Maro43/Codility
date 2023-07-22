@@ -99,23 +99,7 @@ public class LessonEightEquiLeader {
         return equi;
     }
 
-//    public int solution(int[] a) {
-//        int count = 0;
-//        int equi = 0;
-//        Arrays.sort(a);
-//        int dom = a[a.length / 2];
-//        for (int i = 0; i < a.length; i++) {
-//            if (a[i] == dom) {
-//                count++;
-//            }
-//        }
-//        if (!(count > a.length / 2)) {
-//            return 0;
-//        }
-//
-//
-//        return equi;
-//    }
+
 
     public static void main(String[] args) {
         int[] a = {4, 4, 2, 5, 3, 4, 4, 4};
