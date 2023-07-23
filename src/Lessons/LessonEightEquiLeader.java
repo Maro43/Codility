@@ -1,6 +1,6 @@
 package Lessons;
-/*
 
+/*
 A non-empty array A consisting of N integers is given.
 
 The leader of this array is the value that occurs in more than half of the elements of A.
@@ -42,8 +42,8 @@ Write an efficient algorithm for the following assumptions:
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
-
 */
+
 public class LessonEightEquiLeader {
 
     public int solution(int[] a) {
@@ -51,14 +51,17 @@ public class LessonEightEquiLeader {
         int size = 0;
         int current = 0;
         int dom = 0;
+        int sizeDomEqui = 0;
+        int notDom = 0;
+        int nodDomSize = a.length - domSize;
+        int equi = 0;
 
-
-        for (int i = 0; i < a.length; i++) {
+        for (int num : a) {
             if (size == 0) {
                 size++;
-                current = a[i];
+                current = num;
             } else {
-                if (current != a[i]) {
+                if (current != num) {
                     size--;
                 } else {
                     size++;
@@ -67,22 +70,16 @@ public class LessonEightEquiLeader {
         }
         if (size > 0)
             dom = current;
-
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == dom) {
+        for (int num : a) {
+            if (num == dom) {
                 domSize++;
             }
         }
         if (!(domSize > a.length / 2)) {
             return 0;
         }
-
-        int sizeDomEqui = 0;
-        int notDom = 0;
-        int nodDomSize = a.length - domSize;
-        int equi = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == dom) {
+        for (int num : a) {
+            if (num == dom) {
                 sizeDomEqui++;
                 domSize--;
             } else {
@@ -92,14 +89,9 @@ public class LessonEightEquiLeader {
             if (sizeDomEqui > notDom && domSize > nodDomSize) {
                 equi++;
             }
-
         }
-
-
         return equi;
     }
-
-
 
     public static void main(String[] args) {
         int[] a = {4, 4, 2, 5, 3, 4, 4, 4};
